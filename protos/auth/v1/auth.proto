@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package auth.v1;
+
+option go_package = "github.com/jnst/monorepo-go/protos/gen/auth/v1";
+
+service AuthService {
+  rpc SendPasscode(SendPasscodeRequest) returns (SendPasscodeResponse);
+  rpc VerifyPasscode(VerifyPasscodeRequest) returns (VerifyPasscodeResponse);
+}
+
+message SendPasscodeRequest {
+  string email = 1;
+}
+
+message SendPasscodeResponse {
+  bool success = 1;
+}
+
+message VerifyPasscodeRequest {
+  string email = 1;
+  string passcode = 2;
+}
+
+message VerifyPasscodeResponse {
+  string token = 1;
+}

@@ -14,7 +14,7 @@
 
 ## Coding & Design Rules
 
-## Two-Layer Rule
+### Two-Layer Rule
 
 Limit the location of release targets (go.mod) to up to the second layer/directory.
 
@@ -24,3 +24,11 @@ Limit the location of release targets (go.mod) to up to the second layer/directo
 * Bad
   * shared/utils/sliceutil/v0.0.1  => `shared/utils/sliceutil@v0.0.1` Too long and verbose.
   * shared/helpers/dbhelper/v0.0.3
+
+## Notes
+
+Go Workspaces
+
+```shell
+go work init prots
+```
